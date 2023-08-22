@@ -9,9 +9,43 @@ object CommonScenario{
 }
 
 class CommonScenario {
-
+  val open = group("open"){
+  exec(webtours)
+  .exec(webtours2)
+  .exec(webtours3)
+  }
+  val login = group("login"){
+  exec(webtours4)
+    .exec(webtours5)
+    .exec(webtours6)
+  }
+  val openflights = group("openflights"){
+    exec(webtours7)
+      .exec(webtours8)
+      .exec(webtours9)
+  }
+  val ticketattributes = group ("ticketattributes"){
+    exec(webtours10)
+      .exec(webtours11)
+      .exec(webtours12)
+  }
+  val Itinerary = group("Itinerary") {
+    exec(webtours13)
+      .exec(webtours14)
+      .exec(webtours15)
+  }
+  val signoff = group("signoff") {
+    exec(webtours16)
+      .exec(webtours17)
+  }
   val mainScenario = scenario("mainScenario")
-    .exec(contacts)
-    .exec(news)
-
+    .feed(Feeders.users)
+    .feed(Feeders.citystart)
+    .feed(Feeders.cityover)
+    .exec(open)
+    .exec(login)
+    .exec(openflights)
+    .exec(ticketattributes)
+    .exec(Itinerary)
+    .exec(signoff)
 }
