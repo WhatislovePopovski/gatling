@@ -13,7 +13,6 @@
 *.iws
 
 # building
-target
 build
 null
 tmp
