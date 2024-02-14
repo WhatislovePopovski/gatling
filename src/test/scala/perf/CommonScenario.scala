@@ -49,7 +49,6 @@ class CommonScenario {
     .feed(Feeders.users)
     .feed(Feeders.citystart)
     .feed(Feeders.cityover)
-    .feed(Feeders.date)
     .exec(open)
     .exec(login)
     .exec(openflights)

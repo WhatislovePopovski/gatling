@@ -23,3 +23,4 @@ class TestSimulation extends Simulation {
   ).protocols(httpProtocol)
     .maxDuration(1200)
 }
+
